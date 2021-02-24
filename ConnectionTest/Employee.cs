@@ -12,12 +12,17 @@ namespace ConnectionTest
         public char gender;
         public long phoneNumber;
         public string address;
-        public string department;
+        public string[] department;
         public int basicPay;
         public int deduction;
         public int taxablePay;
         public int incomeTax;
         public int netPay;
         public string companyName;
+
+        public Employee()
+        {
+            department = new string[10];
+        }
     }
 }
