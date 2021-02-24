@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-commitMessage="[Dipesh] modify RetrieveAllCodeAdded"
-currentBranchName="UC2RetrieveAllRecords"
-newBranchName="UC3UpdateEmpSalary"
+commitMessage="[Dipesh] modify UpdateEmpSalaryCodeAdded"
+currentBranchName="UC3UpdateEmpSalary"
+newBranchName="UC5DateRange"
 echo --------git status---------
 echo
 git status
