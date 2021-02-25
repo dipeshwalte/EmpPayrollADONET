@@ -50,10 +50,13 @@ namespace TestForADONET
             Assert.AreEqual("F", dataset.Tables[0].Rows[0].ItemArray.GetValue(0));
             Assert.AreEqual(300000, dataset.Tables[0].Rows[0].ItemArray.GetValue(1));
             Assert.AreEqual("M", dataset.Tables[0].Rows[1].ItemArray.GetValue(0));
-            Assert.AreEqual(55000,dataset.Tables[0].Rows[1].ItemArray.GetValue(1));
-           
-
+            Assert.AreEqual(55000,dataset.Tables[0].Rows[1].ItemArray.GetValue(1));      
         }
-        //dataGridView1.DataSource = dset.Tables["student_detail"]; // Binding the datagridview
+
+        [Test]
+        public void InsertEmployeeDetails()
+        {
+        
+        }
     }
 }

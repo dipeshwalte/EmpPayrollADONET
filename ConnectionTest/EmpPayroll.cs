@@ -112,6 +112,39 @@ namespace ConnectionTest
             }
         }
 
+        public void InsertRecordStoredProcedure(string empName,char gender,int phoneNumber)
+        {
+            Employee emp = new Employee();
+            emp.name = empName;
+            emp.startDate = DateTime.Now.Date;
+            emp.gender = gender;
+            emp.phoneNumber = phoneNumber;
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            string query = "sp_AddEmployeeEntry";
+            try
+            {
+                using (connection)
+                {
+                    SqlCommand sqlCommand = new SqlCommand(query, connection);
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlCommand.Parameters.AddWithValue("@StartDate", emp.startDate);
+                    sqlCommand.Parameters.AddWithValue("@Name", emp.name);
+                    sqlCommand.Parameters.AddWithValue("@Gender", emp.gender);
+                    sqlCommand.Parameters.AddWithValue("@PhoneNumber", emp.phoneNumber);
+
+                    connection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
         public void InsertRecordStoredProcedure()
         {
             Employee emp = new Employee();

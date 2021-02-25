@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-commitMessage="[Dipesh] modify DateRangeCodeAdded"
-currentBranchName="UC5DateRange"
-newBranchName="UC6GenderSum"
+commitMessage="[Dipesh] modify GenderSumAdded"
+currentBranchName="UC6GenderSum"
+newBranchName="UC7InsertEmployee"
 echo --------git status---------
 echo
 git status
