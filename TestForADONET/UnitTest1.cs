@@ -57,11 +57,11 @@ namespace TestForADONET
         public void InsertEmployeeDetails()
         {
             Employee employee = new Employee();
-            employee.name = "Mahesh";
+            employee.name = "Suresh";
             employee.startDate = DateTime.Now;
-            employee.phoneNumber = 322342;
+            employee.phoneNumber = 2342342;
             employee.gender = 'M';
-            employee.basicPay = 10000;
+            employee.basicPay = 20000;
             employee.address = "Pimpri";
             employee.companyName = "Bridgelabz";
             employee.department[0] = "Tech";
